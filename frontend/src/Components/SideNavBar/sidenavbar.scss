@@ -1,0 +1,104 @@
+@use "../../../styles/icons/icons" as *;
+@import "../../../styles/variables";
+
+.sidebar_container {
+  background: $base-color;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  grid-column: 1/2;
+  grid-row: 2/3;
+  &__links {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 50px;
+    background-color: $primary-color;
+    padding: 100px 20px;
+    border-radius: 15px;
+    box-shadow: $box-shadow;
+
+    .is-active {
+      text-decoration: underline;
+    }
+    a {
+      text-decoration: none;
+      color: $base-color;
+      text-align: center;
+      font-size: 25px;
+    }
+  }
+  &__logout {
+    margin-bottom: 50px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .sidebar_container {
+    grid-column: 1;
+    grid-row: 3/4;
+    flex-direction: column-reverse;
+    padding-top: 10px;
+    &__links {
+      flex-direction: row;
+      justify-content: space-evenly;
+      background-color: $base-color;
+      gap: 5px;
+      padding: 10px;
+      width: 100%;
+      box-shadow: none;
+      a {
+        visibility: hidden;
+        font-size: 0px;
+        &:nth-child(1) {
+          &::after {
+            visibility: visible;
+            font-family: icomoon;
+            content: "\e91a";
+            font-size: 30px;
+            color: $primary-color;
+          }
+        }
+        &:nth-child(2) {
+          &::after {
+            visibility: visible;
+            font-family: icomoon;
+            content: "\e972";
+            font-size: 30px;
+            color: $primary-color;
+          }
+        }
+        &:nth-child(3) {
+          &::after {
+            visibility: visible;
+            font-family: icomoon;
+            content: "\e95c";
+            font-size: 30px;
+            color: $primary-color;
+          }
+        }
+      }
+      .is-active {
+        &:nth-child(1) {
+          &::after {
+            color: $action-color;
+          }
+        }
+        &:nth-child(2) {
+          &::after {
+            color: $action-color;
+          }
+        }
+        &:nth-child(3) {
+          &::after {
+            color: $action-color;
+          }
+        }
+      }
+    }
+    &__logout {
+      margin-bottom: 0px;
+    }
+  }
+}

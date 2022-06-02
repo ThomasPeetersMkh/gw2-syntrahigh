@@ -1,0 +1,26 @@
+@import "../../../styles/reset";
+@import "../../../styles/variables";
+.layout {
+  display: grid;
+  height: 100vh;
+  grid-template-rows: 1fr 5fr;
+  grid-template-columns: 6fr 30fr;
+
+  &__changing {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    background-color: $base-color;
+    max-height: 100vh;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .layout {
+    grid-template-rows: 125px 100px 150px auto;
+    grid-template-columns: 1fr;
+    &__changing {
+      grid-column: 1;
+      grid-row: 4/5;
+    }
+  }
+}

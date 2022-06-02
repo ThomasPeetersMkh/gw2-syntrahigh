@@ -1,0 +1,142 @@
+@import "../../../styles/variables";
+@import "../../../styles/reset";
+
+.vakdetail {
+  margin: 20px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  gap: 85px;
+  background-color: $primary-color;
+  padding: 30px 50px;
+  box-shadow: $box-shadow;
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 35%;
+    color: $base-color;
+
+    &__title {
+      font-size: 2.2rem;
+    }
+
+    &__description {
+      font-size: 1.25rem;
+      line-height: 1.18;
+    }
+  }
+
+  &__right {
+    width: 60%;
+  }
+}
+
+.edit_score {
+  border: 1px solid $base-color;
+  border-radius: 25px;
+  padding: 0 0 20px 0;
+  overflow: hidden;
+  h3 {
+    text-align: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid $base-color;
+    background-color: $base-color;
+    color: $primary-color;
+    padding-top: 20px;
+  }
+
+  form {
+    display: flex;
+    gap: 20px;
+    justify-content: space-around;
+
+    input {
+      color: $primary-color;
+      background: $base-color;
+      outline: none;
+      border: none;
+      // border-bottom: 1px solid $base-color;
+      text-align: center;
+      font-size: 30px;
+      width: 60px;
+      border-radius: 25px;
+      ::placeholder {
+        color: $base-color;
+      }
+    }
+  }
+
+  button {
+    background-color: $base-color;
+    color: $primary-color;
+  }
+}
+.error {
+  border-radius: 25px;
+  text-align: center;
+  background-color: $base-color;
+  padding: 25px;
+  color: red;
+  display: flex;
+  justify-content: space-around;
+  &__icon_close {
+    :hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.table_wrapper.coursedetails__table {
+  margin: 0;
+  width: 100%;
+}
+
+.students__table.coursedetails__table {
+  background-color: $base-color;
+}
+
+@media screen and (max-width: 1370px) {
+  .vakdetail {
+    padding: 20px;
+    gap: 20px;
+
+    &__left {
+      &__title {
+        font-size: 1.8rem;
+      }
+
+      &__description {
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1025px) {
+  .vakdetail {
+    display: block;
+
+    &__left {
+      width: 100%;
+    }
+
+    &__right {
+      width: 100%;
+      margin-top: 20px;
+    }
+  }
+
+  .edit_score {
+    width: 45%;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .edit_score {
+    width: 45%;
+  }
+}

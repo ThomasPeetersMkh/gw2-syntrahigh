@@ -1,0 +1,50 @@
+@import "./reset";
+@import "./variables";
+
+body {
+  box-sizing: border-box;
+}
+
+.icon_close {
+  color: $base-color;
+  font-size: 70px;
+}
+
+.button {
+  margin-top: 20px;
+  align-items: center;
+  border-radius: 16px;
+  cursor: pointer;
+  display: flex;
+  // font-family: Inter, sans-serif;
+  font-size: 20px;
+  justify-content: center;
+  line-height: 28px;
+  max-width: 100%;
+  padding: 14px 22px;
+  text-decoration: none;
+  transition: all 0.2s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  // width: 100%;
+  &:active {
+    outline: 0;
+  }
+}
+
+.button_form {
+  display: block;
+  margin: 20px auto 0 auto;
+  background-color: rgba(240, 240, 240, 0.26);
+  border: 1px solid $base-color;
+  color: $base-color;
+  width: 300px;
+  &:hover {
+    outline: 0;
+    color: $primary-color;
+    background-color: $base-color;
+    border-color: rgba(0, 0, 0, 0.19);
+    opacity: 0.8;
+  }
+}

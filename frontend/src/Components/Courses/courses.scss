@@ -1,0 +1,26 @@
+@import "../../../styles/variables";
+@import "../../../styles/reset";
+.vakken {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  gap: 20px;
+  width: 95%;
+  align-items: center;
+  margin: 0px 20px 0px 20px;
+  height: 95%;
+
+  &__link {
+    text-decoration: none;
+    color: $base-color;
+    flex: 0 1 500px;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .vakken {
+    display: block;
+    width: 75%;
+    margin: 40px auto 0 auto;
+  }
+}
